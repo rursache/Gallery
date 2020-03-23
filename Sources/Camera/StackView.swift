@@ -77,7 +77,7 @@ class StackView: UIControl{
   }
 
   func renderViews(_ assets: [PHAsset]) {
-    let photos = Array(assets.suffix(Config.Camera.StackView.imageCount))
+    let photos = Array(assets.suffix(GalleryConfig.Camera.StackView.imageCount))
 
     for (index, view) in imageViews.enumerated() {
       if index < photos.count {
@@ -141,7 +141,7 @@ class StackView: UIControl{
   }
 
   func makeImageViews() -> [UIImageView] {
-    return Array(0..<Config.Camera.StackView.imageCount).map { _ in
+    return Array(0..<GalleryConfig.Camera.StackView.imageCount).map { _ in
       let imageView = UIImageView()
 
       imageView.contentMode = .scaleAspectFill
@@ -155,7 +155,7 @@ class StackView: UIControl{
   func makeCountLabel() -> UILabel {
     let label = UILabel()
     label.textColor = UIColor.white
-    label.font = Config.Font.Main.regular.withSize(20)
+    label.font = GalleryConfig.Font.Main.regular.withSize(20)
     label.textAlignment = .center
     label.g_addShadow()
     label.alpha = 0

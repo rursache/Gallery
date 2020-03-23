@@ -42,7 +42,7 @@ public class AdvancedVideoEditor: VideoEditing {
       return
     }
 
-    // Config
+    // GalleryConfig
     writer.shouldOptimizeForNetworkUse = true
 
     self.writer = writer

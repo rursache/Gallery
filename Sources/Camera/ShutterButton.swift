@@ -50,7 +50,7 @@ class ShutterButton: UIButton {
 
   func makeRoundLayer() -> CAShapeLayer {
     let layer = CAShapeLayer()
-    layer.strokeColor = Config.Camera.ShutterButton.numberColor.cgColor
+    layer.strokeColor = GalleryConfig.Camera.ShutterButton.numberColor.cgColor
     layer.lineWidth = 2
     layer.fillColor = nil
 

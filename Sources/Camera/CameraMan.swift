@@ -207,7 +207,7 @@ class CameraMan {
     }
   }
 
-  // MARK: - Configure
+  // MARK: - GalleryConfigure
   func configure(_ block: () -> Void) {
     session.beginConfiguration()
     block()

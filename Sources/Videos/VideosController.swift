@@ -88,7 +88,7 @@ class VideosController: UIViewController {
     gridView.collectionView.g_updateBottomInset(hasVideo ? gridView.bottomView.frame.size.height : 0)
 
     cart.video?.fetchDuration { [weak self] duration in
-      self?.infoLabel.isHidden = duration <= Config.VideoEditor.maximumDuration
+      self?.infoLabel.isHidden = duration <= GalleryConfig.VideoEditor.maximumDuration
     }
   }
 
@@ -111,9 +111,9 @@ class VideosController: UIViewController {
   func makeInfoLabel() -> UILabel {
     let label = UILabel()
     label.textColor = UIColor.white
-    label.font = Config.Font.Text.regular.withSize(12)
+    label.font = GalleryConfig.Font.Text.regular.withSize(12)
     label.text = String(format: "Gallery.Videos.MaxiumDuration".g_localize(fallback: "FIRST %d SECONDS"),
-                        (Int(Config.VideoEditor.maximumDuration)))
+                        (Int(GalleryConfig.VideoEditor.maximumDuration)))
 
     return label
   }
@@ -177,8 +177,8 @@ extension VideosController: UICollectionViewDataSource, UICollectionViewDelegate
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-    let size = (collectionView.bounds.size.width - (Config.Grid.Dimension.columnCount - 1) * Config.Grid.Dimension.cellSpacing)
-      / Config.Grid.Dimension.columnCount
+    let size = (collectionView.bounds.size.width - (GalleryConfig.Grid.Dimension.columnCount - 1) * GalleryConfig.Grid.Dimension.cellSpacing)
+      / GalleryConfig.Grid.Dimension.columnCount
     return CGSize(width: size, height: size)
   }
 

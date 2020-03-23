@@ -7,7 +7,7 @@ class VideoCell: ImageCell {
   lazy var durationLabel: UILabel = self.makeDurationLabel()
   lazy var bottomOverlay: UIView = self.makeBottomOverlay()
 
-  // MARK: - Config
+  // MARK: - GalleryConfig
 
   func configure(_ video: Video) {
     super.configure(video.asset)
@@ -51,7 +51,7 @@ class VideoCell: ImageCell {
 
   func makeDurationLabel() -> UILabel {
     let label = UILabel()
-    label.font = Config.Font.Text.bold.withSize(9)
+    label.font = GalleryConfig.Font.Text.bold.withSize(9)
     label.textColor = UIColor.white
     label.textAlignment = .right
 

@@ -18,7 +18,7 @@ class AlbumCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 
-  // MARK: - Config
+  // MARK: - GalleryConfig
 
   func configure(_ album: Album) {
     albumTitleLabel.text = album.collection.localizedTitle
@@ -64,7 +64,7 @@ class AlbumCell: UITableViewCell {
   private func makeAlbumTitleLabel() -> UILabel {
     let label = UILabel()
     label.numberOfLines = 1
-    label.font = Config.Font.Text.regular.withSize(14)
+    label.font = GalleryConfig.Font.Text.regular.withSize(14)
 
     return label
   }
@@ -72,7 +72,7 @@ class AlbumCell: UITableViewCell {
   private func makeItemCountLabel() -> UILabel {
     let label = UILabel()
     label.numberOfLines = 1
-    label.font = Config.Font.Text.regular.withSize(10)
+    label.font = GalleryConfig.Font.Text.regular.withSize(10)
 
     return label
   }

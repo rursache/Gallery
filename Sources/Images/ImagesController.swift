@@ -213,8 +213,8 @@ extension ImagesController: UICollectionViewDataSource, UICollectionViewDelegate
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-    let size = (collectionView.bounds.size.width - (Config.Grid.Dimension.columnCount - 1) * Config.Grid.Dimension.cellSpacing)
-      / Config.Grid.Dimension.columnCount
+    let size = (collectionView.bounds.size.width - (GalleryConfig.Grid.Dimension.columnCount - 1) * GalleryConfig.Grid.Dimension.cellSpacing)
+      / GalleryConfig.Grid.Dimension.columnCount
     return CGSize(width: size, height: size)
   }
 
@@ -224,7 +224,7 @@ extension ImagesController: UICollectionViewDataSource, UICollectionViewDelegate
     if cart.images.contains(item) {
       cart.remove(item)
     } else {
-      if Config.Camera.imageLimit == 0 || Config.Camera.imageLimit > cart.images.count{
+      if GalleryConfig.Camera.imageLimit == 0 || GalleryConfig.Camera.imageLimit > cart.images.count{
         cart.add(item)
       }
     }

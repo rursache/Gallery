@@ -62,8 +62,8 @@ class ArrowButton: UIButton {
 
   private func makeLabel() -> UILabel {
     let label = UILabel()
-    label.textColor = Config.Grid.ArrowButton.tintColor
-    label.font = Config.Font.Main.regular.withSize(16)
+    label.textColor = GalleryConfig.Grid.ArrowButton.tintColor
+    label.font = GalleryConfig.Font.Main.regular.withSize(16)
     label.textAlignment = .center
 
     return label
@@ -72,7 +72,7 @@ class ArrowButton: UIButton {
   private func makeArrow() -> UIImageView {
     let arrow = UIImageView()
     arrow.image = GalleryBundle.image("gallery_title_arrow")?.withRenderingMode(.alwaysTemplate)
-    arrow.tintColor = Config.Grid.ArrowButton.tintColor
+    arrow.tintColor = GalleryConfig.Grid.ArrowButton.tintColor
     arrow.alpha = 0
 
     return arrow
@@ -82,8 +82,8 @@ class ArrowButton: UIButton {
 
   override var isHighlighted: Bool {
     didSet {
-      label.textColor = isHighlighted ? UIColor.lightGray : Config.Grid.ArrowButton.tintColor
-      arrow.tintColor = isHighlighted ? UIColor.lightGray : Config.Grid.ArrowButton.tintColor
+      label.textColor = isHighlighted ? UIColor.lightGray : GalleryConfig.Grid.ArrowButton.tintColor
+      arrow.tintColor = isHighlighted ? UIColor.lightGray : GalleryConfig.Grid.ArrowButton.tintColor
     }
   }
 }

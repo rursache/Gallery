@@ -46,8 +46,8 @@ class PermissionView: UIView {
 
   func makeLabel() -> UILabel {
     let label = UILabel()
-    label.textColor = Config.Permission.textColor
-    label.font = Config.Font.Text.regular.withSize(14)
+    label.textColor = GalleryConfig.Permission.textColor
+    label.font = GalleryConfig.Font.Text.regular.withSize(14)
     if Permission.Camera.needsPermission {
       label.text = "GalleryAndCamera.Permission.Info".g_localize(fallback: "Please grant access to photos and the camera.")
     } else {
@@ -64,10 +64,10 @@ class PermissionView: UIView {
     let button = UIButton(type: .custom)
     button.setTitle("Gallery.Permission.Button".g_localize(fallback: "Go to Settings").uppercased(),
                     for: UIControl.State())
-    button.backgroundColor = Config.Permission.Button.backgroundColor
-    button.titleLabel?.font = Config.Font.Main.medium.withSize(16)
-    button.setTitleColor(Config.Permission.Button.textColor, for: UIControl.State())
-    button.setTitleColor(Config.Permission.Button.highlightedTextColor, for: .highlighted)
+    button.backgroundColor = GalleryConfig.Permission.Button.backgroundColor
+    button.titleLabel?.font = GalleryConfig.Font.Main.medium.withSize(16)
+    button.setTitleColor(GalleryConfig.Permission.Button.textColor, for: UIControl.State())
+    button.setTitleColor(GalleryConfig.Permission.Button.highlightedTextColor, for: .highlighted)
     button.layer.cornerRadius = 22
     button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
 
@@ -77,14 +77,14 @@ class PermissionView: UIView {
   func makeCloseButton() -> UIButton {
     let button = UIButton(type: .custom)
     button.setImage(GalleryBundle.image("gallery_close")?.withRenderingMode(.alwaysTemplate), for: UIControl.State())
-    button.tintColor = Config.Grid.CloseButton.tintColor
+    button.tintColor = GalleryConfig.Grid.CloseButton.tintColor
 
     return button
   }
 
   func makeImageView() -> UIImageView {
     let view = UIImageView()
-    view.image = Config.Permission.image
+    view.image = GalleryConfig.Permission.image
 
     return view
   }

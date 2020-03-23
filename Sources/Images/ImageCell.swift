@@ -27,7 +27,7 @@ class ImageCell: UICollectionViewCell {
     }
   }
 
-  // MARK: - Config
+  // MARK: - GalleryConfig
 
   func configure(_ asset: PHAsset) {
     imageView.layoutIfNeeded()
@@ -63,7 +63,7 @@ class ImageCell: UICollectionViewCell {
   private func makeHighlightOverlay() -> UIView {
     let view = UIView()
     view.isUserInteractionEnabled = false
-    view.backgroundColor = Config.Grid.FrameView.borderColor.withAlphaComponent(0.3)
+    view.backgroundColor = GalleryConfig.Grid.FrameView.borderColor.withAlphaComponent(0.3)
     view.isHidden = true
 
     return view

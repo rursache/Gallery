@@ -68,7 +68,7 @@ class CameraController: UIViewController {
   }
 
   func setupLocation() {
-    if Config.Camera.recordLocation {
+    if GalleryConfig.Camera.recordLocation {
       locationManager = LocationManager()
     }
   }
@@ -136,7 +136,7 @@ class CameraController: UIViewController {
   }
     
   fileprivate func isBelowImageLimit() -> Bool {
-    return (Config.Camera.imageLimit == 0 || Config.Camera.imageLimit > cart.images.count)
+    return (GalleryConfig.Camera.imageLimit == 0 || GalleryConfig.Camera.imageLimit > cart.images.count)
     }
     
   // MARK: - View

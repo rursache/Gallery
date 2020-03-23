@@ -199,7 +199,7 @@ class CameraView: UIView, UIGestureRecognizerDelegate {
 
   func makeBottomView() -> UIView {
     let view = UIView()
-    view.backgroundColor = Config.Camera.BottomContainer.backgroundColor
+    view.backgroundColor = GalleryConfig.Camera.BottomContainer.backgroundColor
     view.alpha = 0
 
     return view
@@ -222,7 +222,7 @@ class CameraView: UIView, UIGestureRecognizerDelegate {
     let button = UIButton(type: .system)
     button.setTitleColor(UIColor.white, for: UIControl.State())
     button.setTitleColor(UIColor.lightGray, for: .disabled)
-    button.titleLabel?.font = Config.Font.Text.regular.withSize(16)
+    button.titleLabel?.font = GalleryConfig.Font.Text.regular.withSize(16)
     button.setTitle("Gallery.Done".g_localize(fallback: "Done"), for: UIControl.State())
 
     return button

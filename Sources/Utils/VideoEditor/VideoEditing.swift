@@ -29,7 +29,7 @@ extension VideoEditing {
   }
 
   func handle(outputURL: URL, completion: @escaping (_ video: Video?, _ tempPath: URL?) -> Void) {
-    guard Config.VideoEditor.savesEditedVideoToLibrary else {
+    guard GalleryConfig.VideoEditor.savesEditedVideoToLibrary else {
       completion(nil, outputURL)
       return
     }

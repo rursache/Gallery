@@ -25,7 +25,7 @@ struct EditInfo {
   }
 
   static func cropInfo(_ avAsset: AVAsset) -> (size: CGSize, scale: CGFloat) {
-    let desiredSize = avAsset.g_isPortrait ? Config.VideoEditor.portraitSize : Config.VideoEditor.landscapeSize
+    let desiredSize = avAsset.g_isPortrait ? GalleryConfig.VideoEditor.portraitSize : GalleryConfig.VideoEditor.landscapeSize
     let avAssetSize = avAsset.g_correctSize
 
     let scale = min(desiredSize.width / avAssetSize.width, desiredSize.height / avAssetSize.height)
@@ -71,14 +71,14 @@ struct EditInfo {
   }
 
   static var preferredPresetName: String {
-    return Config.VideoEditor.quality
+    return GalleryConfig.VideoEditor.quality
   }
 
   static func timeRange(_ avAsset: AVAsset) -> CMTimeRange {
     var end = avAsset.duration
 
-    if Config.VideoEditor.maximumDuration < avAsset.duration.seconds {
-      end = CMTime(seconds: Config.VideoEditor.maximumDuration, preferredTimescale: 1000)
+    if GalleryConfig.VideoEditor.maximumDuration < avAsset.duration.seconds {
+      end = CMTime(seconds: GalleryConfig.VideoEditor.maximumDuration, preferredTimescale: 1000)
     }
 
     return CMTimeRange(start: CMTime.zero, duration: end)

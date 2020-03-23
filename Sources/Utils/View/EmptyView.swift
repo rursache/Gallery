@@ -33,8 +33,8 @@ class EmptyView: UIView {
 
   private func makeLabel() -> UILabel {
     let label = UILabel()
-    label.textColor = Config.EmptyView.textColor
-    label.font = Config.Font.Text.regular.withSize(14)
+    label.textColor = GalleryConfig.EmptyView.textColor
+    label.font = GalleryConfig.Font.Text.regular.withSize(14)
     label.text = "Gallery.EmptyView.Text".g_localize(fallback: "Nothing to show")
 
     return label
@@ -42,7 +42,7 @@ class EmptyView: UIView {
 
   private func makeImageView() -> UIImageView {
     let view = UIImageView()
-    view.image = Config.EmptyView.image
+    view.image = GalleryConfig.EmptyView.image
 
     return view
   }

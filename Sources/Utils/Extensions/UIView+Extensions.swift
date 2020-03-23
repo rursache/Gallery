@@ -11,7 +11,7 @@ extension UIView {
 
   func g_addRoundBorder() {
     layer.borderWidth = 1
-    layer.borderColor = Config.Grid.FrameView.borderColor.cgColor
+    layer.borderColor = GalleryConfig.Grid.FrameView.borderColor.cgColor
     layer.cornerRadius = 3
     clipsToBounds = true
   }

@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-public struct Config {
+public struct GalleryConfig {
 
   @available(*, deprecated, message: "Use tabsToShow instead.")
   public static var showsVideoTab: Bool {
